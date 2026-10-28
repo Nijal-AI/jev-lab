@@ -1,0 +1,110 @@
+{
+ "id": "votre-cas-alerte",
+ "custom": true,
+ "template": "Lever une alerte",
+ "title": "Mission 3 · Votre cas",
+ "kind": "binary",
+ "description": "Construisez votre propre détecteur. Modèle de départ : repérer les messages qui contiennent des données sensibles avant de les partager.",
+ "mission": {
+  "objectif": "Construire en 15 minutes un tri automatique pour un cas de votre métier, et voir où Jev se trompe.",
+  "etapes": [
+   "Choisissez un modèle de départ : trier en catégories, ou lever une alerte.",
+   "Adaptez les questions à votre métier (ouvrez « Voir ou modifier les questions »).",
+   "Écrivez une dizaine de cas fictifs avec la bonne réponse, un par ligne.",
+   "Lancez le lot, réglez les seuils, et regardez où Jev se trompe."
+  ],
+  "indices": [
+   "Une catégorie par équipe ou par action à mener, pas plus de 6 pour commencer.",
+   "Écrivez des cas difficiles exprès : deux sujets dans le même message, un message hors sujet, une consigne piège."
+  ]
+ },
+ "questions": {
+  "donnees_perso": {
+   "type": "noul",
+   "instructions": "Le message contient des données personnelles identifiantes (nom complet avec adresse, téléphone, numéro de sécurité sociale, IBAN)"
+  },
+  "identifiants": {
+   "type": "noul",
+   "instructions": "Le message contient un mot de passe, un code d'accès ou un identifiant de connexion"
+  }
+ },
+ "target": {
+  "selected": [
+   "donnees_perso",
+   "identifiants"
+  ],
+  "aggregate": "max",
+  "positive": {}
+ },
+ "labels": {
+  "positive": "à signaler",
+  "negative": "ok"
+ },
+ "thresholds": {
+  "low": 0.3,
+  "high": 0.7
+ },
+ "costs": {
+  "fn": 10,
+  "fp": 2,
+  "human": 1
+ },
+ "cases": [
+  {
+   "text": "La réunion de lundi est décalée à 14 h, salle Everest.",
+   "label": "ok"
+  },
+  {
+   "text": "Voici les coordonnées du client : Jean Exemple, 12 rue Fictive, 75000 Paris, 06 00 00 00 00.",
+   "label": "à signaler"
+  },
+  {
+   "text": "Le mot de passe du compte de test est Azerty123!, pense à le changer.",
+   "label": "à signaler"
+  },
+  {
+   "text": "Peux-tu relire la présentation avant jeudi ?",
+   "label": "ok"
+  },
+  {
+   "text": "Mon IBAN pour le remboursement : FR76 0000 0000 0000 0000 0000 000.",
+   "label": "à signaler"
+  },
+  {
+   "text": "Le client a validé le devis, on peut lancer la commande.",
+   "label": "ok"
+  },
+  {
+   "text": "Je te donne le code d'accès à ma boîte mail pour que tu regardes pendant mes congés : Soleil2026",
+   "label": "à signaler"
+  },
+  {
+   "text": "Les chiffres du trimestre sont dans le dossier partagé Finance.",
+   "label": "ok"
+  },
+  {
+   "text": "Numéro de sécurité sociale de la nouvelle recrue : 1 00 00 00 000 000 00.",
+   "label": "à signaler"
+  },
+  {
+   "text": "Merci pour ton aide sur le dossier Durand, tout est réglé.",
+   "label": "ok"
+  }
+ ],
+ "vocab": {
+  "item": "message",
+  "items": "messages",
+  "tool": "détecteur",
+  "fn": "messages sensibles manqués",
+  "fn_cost": "Message sensible manqué",
+  "fp": "fausses alertes",
+  "fp_help": "Messages sans risque signalés à tort.",
+  "fp_cost": "Fausse alerte",
+  "calib_real": "vraiment à signaler",
+  "dec": {
+   "autoriser": "ok",
+   "humain": "à vérifier",
+   "bloquer": "signalé"
+  }
+ }
+}

@@ -1,0 +1,2916 @@
+{
+"02ca25b479e5c841b4d6ba6c6283c04213daa156cf5275dceab2984a3172ed71": {
+"cached_at": 1793209537,
+"latency_ms": 7890,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.1,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.1,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.1,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.8,
+"probabilities": {
+"arnaque": 0.06666666666666665,
+"autre": 0.06666666666666665,
+"legitime": 0.8,
+"suspect": 0.06666666666666665
+},
+"type": "choice"
+}
+},
+"explanation": "Le message semble être une notification de sécurité standard.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"legitime\", \"confidence\": 0.8},\n    \"demande_argent\": {\"probability\": 0.1},\n    \"lien_suspect\": {\"probability\": 0.1},\n    \"urgence\": {\"probability\": 0.1}\n  },\n  \"explanation\": \"Le message semble être une notification de sécurité standard.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 467,
+"output_tokens": 93
+}
+}
+},
+"06e8e295ab47e11b357d8242d2dec0f97d16dcdc2e14484534903609303afedc": {
+"cached_at": 1793209588,
+"latency_ms": 8085,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.1,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.3,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.5,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.9,
+"probabilities": {
+"arnaque": 0.033333333333333326,
+"autre": 0.033333333333333326,
+"legitime": 0.9,
+"suspect": 0.033333333333333326
+},
+"type": "choice"
+}
+},
+"explanation": "Le message semble être un rappel légitime pour une réunion, sans demande d'argent ni lien suspect.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"legitime\", \"confidence\": 0.9},\n    \"demande_argent\": {\"probability\": 0.1},\n    \"lien_suspect\": {\"probability\": 0.3},\n    \"urgence\": {\"probability\": 0.5}\n  },\n  \"explanation\": \"Le message semble être un rappel légitime pour une réunion, sans demande d'argent ni lien suspect.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 472,
+"output_tokens": 103
+}
+}
+},
+"0a7ac3d2b855de456eefa3fa0cb07acd532bc3bf26728b2900fdc75c1cc6b3f1": {
+"cached_at": 1793209604,
+"latency_ms": 4037,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "technique",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.033333333333333326,
+"facturation": 0.033333333333333326,
+"technique": 0.9
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.7,
+"type": "noul"
+}
+},
+"explanation": "Le problème décrit est technique et semble bloquant.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"technique\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.7}\n  },\n  \"explanation\": \"Le problème décrit est technique et semble bloquant.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 324,
+"output_tokens": 61
+}
+}
+},
+"15855b0c79d1216f4ff9e74bd2da412c2f2e714033a58ed68eb94bd4db14707b": {
+"cached_at": 1793209588,
+"latency_ms": 147,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "technique",
+"confidence": 0.93,
+"probabilities": {
+"autre": 0.05,
+"commercial": 0.0,
+"facturation": 0.0,
+"technique": 0.95
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.63,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 479,
+"output_tokens": 70
+}
+}
+},
+"193764027205b12cf4f1c01cbe7ebbe287dcecb8c717555a5977bc5ce101a341": {
+"cached_at": 1793209528,
+"latency_ms": 352,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.03,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.04,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.06,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.49,
+"probabilities": {
+"arnaque": 0.03,
+"autre": 0.04,
+"legitime": 0.62,
+"suspect": 0.31
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 567,
+"output_tokens": 107
+}
+}
+},
+"20fbf8d9ca918ea0fc190fe6a0430829f11d5ef4e731d66a30c0a3887b389211": {
+"cached_at": 1793209563,
+"latency_ms": 8604,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.9,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.1,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.8,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.7,
+"probabilities": {
+"arnaque": 0.10000000000000002,
+"autre": 0.10000000000000002,
+"legitime": 0.10000000000000002,
+"suspect": 0.7
+},
+"type": "choice"
+}
+},
+"explanation": "Le message demande un paiement et met la pression pour agir rapidement, mais il ne contient pas de lien suspect.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"suspect\", \"confidence\": 0.7},\n    \"demande_argent\": {\"probability\": 0.9},\n    \"lien_suspect\": {\"probability\": 0.1},\n    \"urgence\": {\"probability\": 0.8}\n  },\n  \"explanation\": \"Le message demande un paiement et met la pression pour agir rapidement, mais il ne contient pas de lien suspect.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 478,
+"output_tokens": 106
+}
+}
+},
+"23b8de615bdb09791d3dd2257c21cce03f27f453bcd449ec8ee1e7266a287445": {
+"cached_at": 1793209528,
+"latency_ms": 443,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.93,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.97,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.69,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.96,
+"probabilities": {
+"arnaque": 0.97,
+"autre": 0.0,
+"legitime": 0.0,
+"suspect": 0.03
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 581,
+"output_tokens": 107
+}
+}
+},
+"252928318452ced3d0ffcb72fb91f8ea1dd6e074cdfa590bb48f475a28f12d04": {
+"cached_at": 1793209553,
+"latency_ms": 273,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.31,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.95,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.87,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.97,
+"probabilities": {
+"arnaque": 0.98,
+"autre": 0.0,
+"legitime": 0.0,
+"suspect": 0.02
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 582,
+"output_tokens": 107
+}
+}
+},
+"329fe87c4f7727747c9998aefd077341df6ff6905b5032715ba8662d48b564f2": {
+"cached_at": 1793209580,
+"latency_ms": 160,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "technique",
+"confidence": 1.0,
+"probabilities": {
+"autre": 0.0,
+"commercial": 0.0,
+"facturation": 0.0,
+"technique": 1.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.8,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 495,
+"output_tokens": 70
+}
+}
+},
+"35ac88fc2a63e4f7e83c12602bee7c74997e0c21e7128ae0f27438edfa93b523": {
+"cached_at": 1793209605,
+"latency_ms": 4946,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "facturation",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.033333333333333326,
+"facturation": 0.9,
+"technique": 0.033333333333333326
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.8,
+"type": "noul"
+}
+},
+"explanation": "Le message mentionne un avoir non reçu après résiliation, ce qui relève de la facturation et exprime une insatisfaction urgente.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"facturation\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.8}\n  },\n  \"explanation\": \"Le message mentionne un avoir non reçu après résiliation, ce qui relève de la facturation et exprime une insatisfaction urgente.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 331,
+"output_tokens": 80
+}
+}
+},
+"3637d8fbee1bd726d2d0706ac97ce00bd0833e027abeaf129f8d79b7b135009b": {
+"cached_at": 1793209605,
+"latency_ms": 4083,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "commercial",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.9,
+"facturation": 0.033333333333333326,
+"technique": 0.033333333333333326
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.1,
+"type": "noul"
+}
+},
+"explanation": "La question porte sur une offre commerciale et ne mentionne pas d'urgence.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"commercial\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.1}\n  },\n  \"explanation\": \"La question porte sur une offre commerciale et ne mentionne pas d'urgence.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 326,
+"output_tokens": 67
+}
+}
+},
+"3c33bfaf864764bbd79f6e550ebdf1a03f3f2ead9d0eaf2648a3c5b79790fb1a": {
+"cached_at": 1793209540,
+"latency_ms": 12060,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.1,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.1,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.1,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.9,
+"probabilities": {
+"arnaque": 0.033333333333333326,
+"autre": 0.033333333333333326,
+"legitime": 0.9,
+"suspect": 0.033333333333333326
+},
+"type": "choice"
+}
+},
+"explanation": "Le message est un rappel de rendez-vous médical, ce qui est un usage normal pour un SMS ou un e-mail.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"legitime\", \"confidence\": 0.9},\n    \"demande_argent\": {\"probability\": 0.1},\n    \"lien_suspect\": {\"probability\": 0.1},\n    \"urgence\": {\"probability\": 0.1}\n  },\n  \"explanation\": \"Le message est un rappel de rendez-vous médical, ce qui est un usage normal pour un SMS ou un e-mail.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 469,
+"output_tokens": 107
+}
+}
+},
+"3d29ffe856ba685527e2d2dd9747a58f26a6e8267fc26e0824a19d6967b25fc0": {
+"cached_at": 1793209580,
+"latency_ms": 8200,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.9,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.1,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.5,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.8,
+"probabilities": {
+"arnaque": 0.06666666666666665,
+"autre": 0.06666666666666665,
+"legitime": 0.06666666666666665,
+"suspect": 0.8
+},
+"type": "choice"
+}
+},
+"explanation": "Le message demande un changement de RIB sans preuve d'identité, ce qui est suspect.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"suspect\", \"confidence\": 0.8},\n    \"demande_argent\": {\"probability\": 0.9},\n    \"lien_suspect\": {\"probability\": 0.1},\n    \"urgence\": {\"probability\": 0.5}\n  },\n  \"explanation\": \"Le message demande un changement de RIB sans preuve d'identité, ce qui est suspect.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 479,
+"output_tokens": 101
+}
+}
+},
+"468230c98a2adbcaaf0cadf0db10b062e407b9005b1a8a77a24e235db6ee7185": {
+"cached_at": 1793209553,
+"latency_ms": 15626,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.1,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.0,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.3,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.8,
+"probabilities": {
+"arnaque": 0.06666666666666665,
+"autre": 0.06666666666666665,
+"legitime": 0.06666666666666665,
+"suspect": 0.8
+},
+"type": "choice"
+}
+},
+"explanation": "Le message semble suspect car il demande de changer de numéro sans preuve d'identité.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"suspect\", \"confidence\": 0.8},\n    \"demande_argent\": {\"probability\": 0.1},\n    \"lien_suspect\": {\"probability\": 0.0},\n    \"urgence\": {\"probability\": 0.3}\n  },\n  \"explanation\": \"Le message semble suspect car il demande de changer de numéro sans preuve d'identité.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 488,
+"output_tokens": 99
+}
+}
+},
+"46932404c818f7608d4948cad3afe08e8c8033ca8b36c4779f7761a87048ef03": {
+"cached_at": 1793209592,
+"latency_ms": 169,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "facturation",
+"confidence": 1.0,
+"probabilities": {
+"autre": 0.0,
+"commercial": 0.0,
+"facturation": 1.0,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.36,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 480,
+"output_tokens": 70
+}
+}
+},
+"46cde7a6f48a2e5de333d1e577e37c8ef08128a08a83fde6ebe2a4caa5360cff": {
+"cached_at": 1793209554,
+"latency_ms": 17661,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.9,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.9,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.5,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.9,
+"probabilities": {
+"arnaque": 0.9,
+"autre": 0.033333333333333326,
+"legitime": 0.033333333333333326,
+"suspect": 0.033333333333333326
+},
+"type": "choice"
+}
+},
+"explanation": "Le message ressemble à une tentative d'hameçonnage classique avec une fausse urgence et une demande de coordonnées bancaires.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"arnaque\", \"confidence\": 0.9},\n    \"demande_argent\": {\"probability\": 0.9},\n    \"lien_suspect\": {\"probability\": 0.9},\n    \"urgence\": {\"probability\": 0.5}\n  },\n  \"explanation\": \"Le message ressemble à une tentative d'hameçonnage classique avec une fausse urgence et une demande de coordonnées bancaires.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 483,
+"output_tokens": 110
+}
+}
+},
+"4fae5206df261c8439e4cfd878eddb28759b68cd8ad75a97c7f84dca78299081": {
+"cached_at": 1793209580,
+"latency_ms": 8185,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.1,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.1,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.7,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.8,
+"probabilities": {
+"arnaque": 0.06666666666666665,
+"autre": 0.06666666666666665,
+"legitime": 0.8,
+"suspect": 0.06666666666666665
+},
+"type": "choice"
+}
+},
+"explanation": "Le message semble être une communication interne légitime concernant un changement d'horaire de réunion.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"legitime\", \"confidence\": 0.8},\n    \"demande_argent\": {\"probability\": 0.1},\n    \"lien_suspect\": {\"probability\": 0.1},\n    \"urgence\": {\"probability\": 0.7}\n  },\n  \"explanation\": \"Le message semble être une communication interne légitime concernant un changement d'horaire de réunion.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 470,
+"output_tokens": 101
+}
+}
+},
+"517fad518f00da3dcb09c8062e1086393cfeb4af2a0a0981cf8332c92117f800": {
+"cached_at": 1793209593,
+"latency_ms": 157,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "commercial",
+"confidence": 0.99,
+"probabilities": {
+"autre": 0.01,
+"commercial": 0.99,
+"facturation": 0.0,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.07,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 481,
+"output_tokens": 68
+}
+}
+},
+"51c95f9f52be7143846b8bfb95c908f5c768fa07de69d7e390ce86900c72dac9": {
+"cached_at": 1793209537,
+"latency_ms": 267,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.04,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.78,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.54,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.76,
+"probabilities": {
+"arnaque": 0.82,
+"autre": 0.0,
+"legitime": 0.01,
+"suspect": 0.17
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 588,
+"output_tokens": 107
+}
+}
+},
+"52fc7afd6e0ef3cd4b08f225c518ab65c0e2212a6a13121f530063cf81f0eacb": {
+"cached_at": 1793209529,
+"latency_ms": 177,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.1,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.94,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.82,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.92,
+"probabilities": {
+"arnaque": 0.9400000000000001,
+"autre": 0.0,
+"legitime": 0.0,
+"suspect": 0.06
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 570,
+"output_tokens": 107
+}
+}
+},
+"58046a2ee98ef9fa1e3f6876bbe6cb5897ebaae3430be55a0c55340121bf8213": {
+"cached_at": 1793209561,
+"latency_ms": 196,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.87,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.93,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.66,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.93,
+"probabilities": {
+"arnaque": 0.95,
+"autre": 0.0,
+"legitime": 0.0,
+"suspect": 0.05
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 569,
+"output_tokens": 107
+}
+}
+},
+"5a95c447cf4f6cb6c17c1d211a286a69f344801499b3a5448e17d0583e2f47fe": {
+"cached_at": 1793209537,
+"latency_ms": 205,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.02,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.02,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.15,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.92,
+"probabilities": {
+"arnaque": 0.01,
+"autre": 0.01,
+"legitime": 0.94,
+"suspect": 0.04
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 565,
+"output_tokens": 107
+}
+}
+},
+"5aa86fab5e91a30c76efefa2443b5be9d65789850c1aa45d91f25958fd76b1b6": {
+"cached_at": 1793209611,
+"latency_ms": 5949,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "technique",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.033333333333333326,
+"facturation": 0.033333333333333326,
+"technique": 0.9
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.9,
+"type": "noul"
+}
+},
+"explanation": "Le message mentionne un problème technique urgent avec la synchronisation de l'ERP.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"technique\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.9}\n  },\n  \"explanation\": \"Le message mentionne un problème technique urgent avec la synchronisation de l'ERP.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 337,
+"output_tokens": 69
+}
+}
+},
+"5c8b1f8478393e147795b60fb36aca14ca1fd3fb967ee75e3290026fae867996": {
+"cached_at": 1793209587,
+"latency_ms": 159,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "facturation",
+"confidence": 1.0,
+"probabilities": {
+"autre": 0.0,
+"commercial": 0.0,
+"facturation": 1.0,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.06,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 484,
+"output_tokens": 70
+}
+}
+},
+"5e4c9babdb93dfd1e474966616c23ba52057ac9336109e7621fdaefcc9262600": {
+"cached_at": 1793209611,
+"latency_ms": 171,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "autre",
+"confidence": 0.87,
+"probabilities": {
+"autre": 0.9,
+"commercial": 0.1,
+"facturation": 0.0,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.05,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 475,
+"output_tokens": 69
+}
+}
+},
+"5f7d20c47eb489fb24ff262983eb030cbc19918e777f7310e6f9aec7c1d786a9": {
+"cached_at": 1793209605,
+"latency_ms": 156,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "commercial",
+"confidence": 0.89,
+"probabilities": {
+"autre": 0.0,
+"commercial": 0.92,
+"facturation": 0.08,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.06,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 489,
+"output_tokens": 68
+}
+}
+},
+"6304c60936df84faeeab6d52a7fad7175294a8c1c5d704942342a735fa5c84cc": {
+"cached_at": 1793209599,
+"latency_ms": 7812,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "autre",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.9,
+"commercial": 0.033333333333333326,
+"facturation": 0.033333333333333326,
+"technique": 0.033333333333333326
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.1,
+"type": "noul"
+}
+},
+"explanation": "Le message concerne le RGPD, donc l'équipe 'autre' est appropriée. Il n'y a pas d'urgence exprimée.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"autre\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.1}\n  },\n  \"explanation\": \"Le message concerne le RGPD, donc l'équipe 'autre' est appropriée. Il n'y a pas d'urgence exprimée.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 333,
+"output_tokens": 80
+}
+}
+},
+"6647659dc559670c49428ad03af3219276de7dfd39d4362c463bf6d893329a66": {
+"cached_at": 1793209572,
+"latency_ms": 10621,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.9,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.9,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.7,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.8,
+"probabilities": {
+"arnaque": 0.06666666666666665,
+"autre": 0.06666666666666665,
+"legitime": 0.06666666666666665,
+"suspect": 0.8
+},
+"type": "choice"
+}
+},
+"explanation": "Le message semble suspect car il demande une mise à jour de paiement via un lien inconnu et met la pression en évoquant une suspension.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"suspect\", \"confidence\": 0.8},\n    \"demande_argent\": {\"probability\": 0.9},\n    \"lien_suspect\": {\"probability\": 0.9},\n    \"urgence\": {\"probability\": 0.7}\n  },\n  \"explanation\": \"Le message semble suspect car il demande une mise à jour de paiement via un lien inconnu et met la pression en évoquant une suspension.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 472,
+"output_tokens": 111
+}
+}
+},
+"674caae5024f3aed137345cc5009cec811ce3bbd0782ff140968fe92bea410e4": {
+"cached_at": 1793209604,
+"latency_ms": 144,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "facturation",
+"confidence": 0.49,
+"probabilities": {
+"autre": 0.01,
+"commercial": 0.03,
+"facturation": 0.62,
+"technique": 0.34
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.18,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 490,
+"output_tokens": 70
+}
+}
+},
+"69fa0a0f847fe1965583dd4a197401aa20a1a2517eb4490840b32be548752e7d": {
+"cached_at": 1793209572,
+"latency_ms": 8269,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.1,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.1,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.1,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.9,
+"probabilities": {
+"arnaque": 0.033333333333333326,
+"autre": 0.033333333333333326,
+"legitime": 0.9,
+"suspect": 0.033333333333333326
+},
+"type": "choice"
+}
+},
+"explanation": "Le message semble être un message normal d'un proche.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"legitime\", \"confidence\": 0.9},\n    \"demande_argent\": {\"probability\": 0.1},\n    \"lien_suspect\": {\"probability\": 0.1},\n    \"urgence\": {\"probability\": 0.1}\n  },\n  \"explanation\": \"Le message semble être un message normal d'un proche.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 465,
+"output_tokens": 94
+}
+}
+},
+"6bd47bb44daa7d85a2c91925d8578c6d7e089f01685e9bdd940bdb1927028b91": {
+"cached_at": 1793209572,
+"latency_ms": 200,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.79,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.07,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.09,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.44,
+"probabilities": {
+"arnaque": 0.28,
+"autre": 0.01,
+"legitime": 0.13,
+"suspect": 0.58
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 580,
+"output_tokens": 107
+}
+}
+},
+"6f54b04f835d08034847cfa20a4348bd472f2f2b0a56446c1b3382da31d4a96c": {
+"cached_at": 1793209600,
+"latency_ms": 181,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "facturation",
+"confidence": 1.0,
+"probabilities": {
+"autre": 0.0,
+"commercial": 0.0,
+"facturation": 1.0,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.69,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 486,
+"output_tokens": 70
+}
+}
+},
+"6fdf1066d1f2e4ef49a4fa1203f953f5087b237dc8b1ba8064703cf8081f6029": {
+"cached_at": 1793209572,
+"latency_ms": 10476,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.1,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.5,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.3,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.7,
+"probabilities": {
+"arnaque": 0.10000000000000002,
+"autre": 0.10000000000000002,
+"legitime": 0.10000000000000002,
+"suspect": 0.7
+},
+"type": "choice"
+}
+},
+"explanation": "Le message est suspect car il pourrait être une tentative d'hameçonnage, mais il ne demande pas d'argent ni d'urgence.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"suspect\", \"confidence\": 0.7},\n    \"demande_argent\": {\"probability\": 0.1},\n    \"lien_suspect\": {\"probability\": 0.5},\n    \"urgence\": {\"probability\": 0.3}\n  },\n  \"explanation\": \"Le message est suspect car il pourrait être une tentative d'hameçonnage, mais il ne demande pas d'argent ni d'urgence.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 468,
+"output_tokens": 111
+}
+}
+},
+"7258954cf13b964a7c44b6abe71dfa073d732cc4c8def09ed9e565fd8c872217": {
+"cached_at": 1793209593,
+"latency_ms": 4328,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "technique",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.033333333333333326,
+"facturation": 0.033333333333333326,
+"technique": 0.9
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.7,
+"type": "noul"
+}
+},
+"explanation": "Le problème décrit est technique et peut bloquer l'utilisateur.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"technique\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.7}\n  },\n  \"explanation\": \"Le problème décrit est technique et peut bloquer l'utilisateur.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 327,
+"output_tokens": 64
+}
+}
+},
+"75156e029a9ccadeb7b7f98a006018e2dc3af4d9e805e0a4eb4efa8c5e37fe8d": {
+"cached_at": 1793209572,
+"latency_ms": 135,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.03,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.04,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.07,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.41,
+"probabilities": {
+"arnaque": 0.07,
+"autre": 0.06,
+"legitime": 0.31,
+"suspect": 0.56
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 576,
+"output_tokens": 107
+}
+}
+},
+"770fec8c452ff229c68dff35872dab324ede7eeab6c17b5f31488b3a8274e04e": {
+"cached_at": 1793209592,
+"latency_ms": 4326,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "facturation",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.033333333333333326,
+"facturation": 0.9,
+"technique": 0.033333333333333326
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.1,
+"type": "noul"
+}
+},
+"explanation": "La demande concerne une facture et un numéro de TVA, ce qui relève de la facturation.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"facturation\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.1}\n  },\n  \"explanation\": \"La demande concerne une facture et un numéro de TVA, ce qui relève de la facturation.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 335,
+"output_tokens": 72
+}
+}
+},
+"7ec1bb734023bc37dface3b93f236b838972335000443673f1b77e2f59c551e3": {
+"cached_at": 1793209591,
+"latency_ms": 154,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "autre",
+"confidence": 1.0,
+"probabilities": {
+"autre": 1.0,
+"commercial": 0.0,
+"facturation": 0.0,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.06,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 486,
+"output_tokens": 69
+}
+}
+},
+"7fc9f4205a37331ed4403f35a2cea0d9763096aaa7e3999e3ac15812ebe7f532": {
+"cached_at": 1793209586,
+"latency_ms": 5943,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "technique",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.033333333333333326,
+"facturation": 0.033333333333333326,
+"technique": 0.9
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.8,
+"type": "noul"
+}
+},
+"explanation": "Le message décrit un problème technique bloquant avec une erreur 500.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"technique\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.8}\n  },\n  \"explanation\": \"Le message décrit un problème technique bloquant avec une erreur 500.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 343,
+"output_tokens": 67
+}
+}
+},
+"82f145fb8d8cd634a530b37dc74dc09e2c4e9cfa5ad03d2cd296871697a0d5b9": {
+"cached_at": 1793209603,
+"latency_ms": 175,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "autre",
+"confidence": 0.97,
+"probabilities": {
+"autre": 0.98,
+"commercial": 0.02,
+"facturation": 0.0,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.02,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 477,
+"output_tokens": 69
+}
+}
+},
+"884e618afcdbe6197b289acb2520518c2fe743541705903710cf9a71a40f2691": {
+"cached_at": 1793209600,
+"latency_ms": 156,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "technique",
+"confidence": 0.97,
+"probabilities": {
+"autre": 0.02,
+"commercial": 0.0,
+"facturation": 0.0,
+"technique": 0.98
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.53,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 475,
+"output_tokens": 70
+}
+}
+},
+"88c66d9442a92b870be5cd5a9f865afec34ef80ffcc878bff112a1a90a129d3e": {
+"cached_at": 1793209580,
+"latency_ms": 156,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "facturation",
+"confidence": 1.0,
+"probabilities": {
+"autre": 0.0,
+"commercial": 0.0,
+"facturation": 1.0,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.16,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 489,
+"output_tokens": 70
+}
+}
+},
+"8f9fcd1f70bf0e052f99517e11621f39b665af6db9f1ddfc943362578f230ecc": {
+"cached_at": 1793209603,
+"latency_ms": 3662,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "autre",
+"confidence": 1.0,
+"probabilities": {
+"autre": 1.0,
+"commercial": 0.0,
+"facturation": 0.0,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.0,
+"type": "noul"
+}
+},
+"explanation": "Le message concerne le recrutement, ce qui relève de la catégorie 'autre'.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\"answers\": {\"equipe\": {\"choice\": \"autre\", \"confidence\": 1}, \"urgent\": {\"probability\": 0}}, \"explanation\": \"Le message concerne le recrutement, ce qui relève de la catégorie 'autre'.\"}",
+"type_errors": [],
+"usage": {
+"input_tokens": 325,
+"output_tokens": 57
+}
+}
+},
+"8fe6b9dd92e0de9ff22d08ecdf4c6f3557b10157e24ec530f9677603418577aa": {
+"cached_at": 1793209599,
+"latency_ms": 270,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "autre",
+"confidence": 0.99,
+"probabilities": {
+"autre": 0.99,
+"commercial": 0.01,
+"facturation": 0.0,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.11,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 476,
+"output_tokens": 69
+}
+}
+},
+"97945c2bdb367becfb6e96b0c9433cc00e1988eb4db152953c7cca5f4381b146": {
+"cached_at": 1793209537,
+"latency_ms": 227,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.95,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.97,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.64,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.99,
+"probabilities": {
+"arnaque": 0.99,
+"autre": 0.0,
+"legitime": 0.0,
+"suspect": 0.01
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 577,
+"output_tokens": 107
+}
+}
+},
+"9826d654956514005b6d08c8753283c6ea128cfd7b45fef1178745a37c2b599c": {
+"cached_at": 1793209580,
+"latency_ms": 217,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.68,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.2,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.26,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.71,
+"probabilities": {
+"arnaque": 0.78,
+"autre": 0.0,
+"legitime": 0.0,
+"suspect": 0.22
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 585,
+"output_tokens": 107
+}
+}
+},
+"99bf4b7068dbf6073e164cf12a139ff73e9a822a68f9e902b3da893a8da3cb5c": {
+"cached_at": 1793209620,
+"latency_ms": 9028,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "autre",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.9,
+"commercial": 0.033333333333333326,
+"facturation": 0.033333333333333326,
+"technique": 0.033333333333333326
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.1,
+"type": "noul"
+}
+},
+"explanation": "Le message parle de partenariat, ce qui relève de la catégorie 'autre' et ne semble pas urgent.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\"answers\": {\"equipe\": {\"choice\": \"autre\", \"confidence\": 0.9}, \"urgent\": {\"probability\": 0.1}}, \"explanation\": \"Le message parle de partenariat, ce qui relève de la catégorie 'autre' et ne semble pas urgent.\"}",
+"type_errors": [],
+"usage": {
+"input_tokens": 326,
+"output_tokens": 66
+}
+}
+},
+"9b44507d8e2731de244e68b1d09943ae35f597231ce65b92698e9e5fdb18ea8c": {
+"cached_at": 1793209580,
+"latency_ms": 7716,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.1,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.1,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.3,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.8,
+"probabilities": {
+"arnaque": 0.06666666666666665,
+"autre": 0.06666666666666665,
+"legitime": 0.8,
+"suspect": 0.06666666666666665
+},
+"type": "choice"
+}
+},
+"explanation": "Le message semble être une notification de livraison standard.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"legitime\", \"confidence\": 0.8},\n    \"demande_argent\": {\"probability\": 0.1},\n    \"lien_suspect\": {\"probability\": 0.1},\n    \"urgence\": {\"probability\": 0.3}\n  },\n  \"explanation\": \"Le message semble être une notification de livraison standard.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 479,
+"output_tokens": 95
+}
+}
+},
+"9e7601c96d047a1487c7f0a059fb1904f80da99a7eee523ef53137b5f4793ef2": {
+"cached_at": 1793209563,
+"latency_ms": 156,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.25,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.96,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.88,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 1.0,
+"probabilities": {
+"arnaque": 1.0,
+"autre": 0.0,
+"legitime": 0.0,
+"suspect": 0.0
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 581,
+"output_tokens": 107
+}
+}
+},
+"a47d078dc9bb31d6d63cb0e8a0d0f483be89b42816192ada52e079603d3ac0fc": {
+"cached_at": 1793209587,
+"latency_ms": 7047,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "facturation",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.033333333333333326,
+"facturation": 0.9,
+"technique": 0.033333333333333326
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.5,
+"type": "noul"
+}
+},
+"explanation": "Le message mentionne un problème de prélèvement et demande un remboursement, ce qui relève de la facturation. L'urgence n'est pas clairement exprimée.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"facturation\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.5}\n  },\n  \"explanation\": \"Le message mentionne un problème de prélèvement et demande un remboursement, ce qui relève de la facturation. L'urgence n'est pas clairement exprimée.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 340,
+"output_tokens": 85
+}
+}
+},
+"a543df3b95323f070d7e39f721d01c2bc2539a0381b82e3405d562dd49d5794b": {
+"cached_at": 1793209537,
+"latency_ms": 8980,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.9,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.9,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.5,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.9,
+"probabilities": {
+"arnaque": 0.9,
+"autre": 0.033333333333333326,
+"legitime": 0.033333333333333326,
+"suspect": 0.033333333333333326
+},
+"type": "choice"
+}
+},
+"explanation": "Le message demande un paiement et contient un lien suspect, typique d'une arnaque.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"arnaque\", \"confidence\": 0.9},\n    \"demande_argent\": {\"probability\": 0.9},\n    \"lien_suspect\": {\"probability\": 0.9},\n    \"urgence\": {\"probability\": 0.5}\n  },\n  \"explanation\": \"Le message demande un paiement et contient un lien suspect, typique d'une arnaque.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 482,
+"output_tokens": 103
+}
+}
+},
+"a639d38451e6165fe1bcaa36827d6e6f8ab0327030cbda449a8c3caf33ffc000": {
+"cached_at": 1793209616,
+"latency_ms": 10989,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "commercial",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.9,
+"facturation": 0.033333333333333326,
+"technique": 0.033333333333333326
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.1,
+"type": "noul"
+}
+},
+"explanation": "La question porte sur les tarifs et les offres, donc l'équipe commerciale est la plus appropriée. Il n'y a pas d'urgence exprimée.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"commercial\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.1}\n  },\n  \"explanation\": \"La question porte sur les tarifs et les offres, donc l'équipe commerciale est la plus appropriée. Il n'y a pas d'urgence exprimée.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 337,
+"output_tokens": 84
+}
+}
+},
+"a90113908b7505438d1b4e1387d923880df8252ad895c663855843c709e5902d": {
+"cached_at": 1793209601,
+"latency_ms": 186,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "commercial",
+"confidence": 0.99,
+"probabilities": {
+"autre": 0.0,
+"commercial": 0.99,
+"facturation": 0.01,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.05,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 478,
+"output_tokens": 68
+}
+}
+},
+"aa05a1bb650d6320d474786ee91d78bc1aa726b01ff14632402717210af3d16f": {
+"cached_at": 1793209540,
+"latency_ms": 156,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.06,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.07,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.07,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.31,
+"probabilities": {
+"arnaque": 0.07,
+"autre": 0.06,
+"legitime": 0.39,
+"suspect": 0.48
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 565,
+"output_tokens": 107
+}
+}
+},
+"aa1fdd1f93b71977b4936ce9e35834875c7e150b78e21f36f3b8a6ac0460929a": {
+"cached_at": 1793209600,
+"latency_ms": 6905,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "technique",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.033333333333333326,
+"facturation": 0.033333333333333326,
+"technique": 0.9
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.7,
+"type": "noul"
+}
+},
+"explanation": "Le message décrit un problème technique avec l'application et mentionne une lenteur importante.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"technique\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.7}\n  },\n  \"explanation\": \"Le message décrit un problème technique avec l'application et mentionne une lenteur importante.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 336,
+"output_tokens": 68
+}
+}
+},
+"af3eb8994a8f7910d64be35fb069e21bcfdecec9c041f2b5fe08af8faf83c3e2": {
+"cached_at": 1793209608,
+"latency_ms": 178,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "technique",
+"confidence": 0.99,
+"probabilities": {
+"autre": 0.01,
+"commercial": 0.0,
+"facturation": 0.0,
+"technique": 0.99
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.91,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 493,
+"output_tokens": 70
+}
+}
+},
+"af8291e63a6be3b809103e6b4a199ec063bb76602a885b8bf37925676d26b8e0": {
+"cached_at": 1793209589,
+"latency_ms": 8720,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.9,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.1,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.5,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.9,
+"probabilities": {
+"arnaque": 0.9,
+"autre": 0.033333333333333326,
+"legitime": 0.033333333333333326,
+"suspect": 0.033333333333333326
+},
+"type": "choice"
+}
+},
+"explanation": "Le message demande un paiement sans rencontre préalable et mentionne une situation à l'étranger, ce qui est typique d'une arnaque.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"arnaque\", \"confidence\": 0.9},\n    \"demande_argent\": {\"probability\": 0.9},\n    \"lien_suspect\": {\"probability\": 0.1},\n    \"urgence\": {\"probability\": 0.5}\n  },\n  \"explanation\": \"Le message demande un paiement sans rencontre préalable et mentionne une situation à l'étranger, ce qui est typique d'une arnaque.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 480,
+"output_tokens": 113
+}
+}
+},
+"b25d99fcf63f7b35120a8cc238c633d7579869de08d4441a528ead91be7a5e56": {
+"cached_at": 1793209572,
+"latency_ms": 262,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.01,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.03,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.4,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.35,
+"probabilities": {
+"arnaque": 0.03,
+"autre": 0.08,
+"legitime": 0.51,
+"suspect": 0.38
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 573,
+"output_tokens": 107
+}
+}
+},
+"b4bfac936c5e4e7fdbe1e7205db14592637e6acf9395e9c8e9f89d25ade54764": {
+"cached_at": 1793209599,
+"latency_ms": 7522,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "facturation",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.033333333333333326,
+"facturation": 0.9,
+"technique": 0.033333333333333326
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.3,
+"type": "noul"
+}
+},
+"explanation": "La question concerne la mise à jour d'un moyen de paiement, relevant de la facturation.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"facturation\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.3}\n  },\n  \"explanation\": \"La question concerne la mise à jour d'un moyen de paiement, relevant de la facturation.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 331,
+"output_tokens": 71
+}
+}
+},
+"b626c328eb112a68c9bd89baa38146c5ca28af6f51525add987dbcda6aacda1e": {
+"cached_at": 1793209572,
+"latency_ms": 139,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.03,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.12,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.06,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.51,
+"probabilities": {
+"arnaque": 0.32,
+"autre": 0.01,
+"legitime": 0.04,
+"suspect": 0.63
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 581,
+"output_tokens": 107
+}
+}
+},
+"b88dd113ae8874a071ef54c7e668d81cc9c1721601ec90674993b85e8048f7a6": {
+"cached_at": 1793209580,
+"latency_ms": 8267,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.1,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.1,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.1,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.9,
+"probabilities": {
+"arnaque": 0.033333333333333326,
+"autre": 0.033333333333333326,
+"legitime": 0.9,
+"suspect": 0.033333333333333326
+},
+"type": "choice"
+}
+},
+"explanation": "Le message semble être une erreur de numéro et ne présente pas de signes d'arnaque.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"legitime\", \"confidence\": 0.9},\n    \"demande_argent\": {\"probability\": 0.1},\n    \"lien_suspect\": {\"probability\": 0.1},\n    \"urgence\": {\"probability\": 0.1}\n  },\n  \"explanation\": \"Le message semble être une erreur de numéro et ne présente pas de signes d'arnaque.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 478,
+"output_tokens": 102
+}
+}
+},
+"b89cc2e819a09d9d4782d448cac967e286191be2aa86508b9196018b6bf40502": {
+"cached_at": 1793209553,
+"latency_ms": 15728,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.1,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.0,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.3,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.9,
+"probabilities": {
+"arnaque": 0.033333333333333326,
+"autre": 0.033333333333333326,
+"legitime": 0.9,
+"suspect": 0.033333333333333326
+},
+"type": "choice"
+}
+},
+"explanation": "Le message semble être une communication normale entre proches.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"legitime\", \"confidence\": 0.9},\n    \"demande_argent\": {\"probability\": 0.1},\n    \"lien_suspect\": {\"probability\": 0.0},\n    \"urgence\": {\"probability\": 0.3}\n  },\n  \"explanation\": \"Le message semble être une communication normale entre proches.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 465,
+"output_tokens": 93
+}
+}
+},
+"bc6b943cd334751d3068cbf93dc38239613527781727080aded6f7e8f919e468": {
+"cached_at": 1793209553,
+"latency_ms": 193,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.94,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.13,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.91,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.93,
+"probabilities": {
+"arnaque": 0.95,
+"autre": 0.0,
+"legitime": 0.0,
+"suspect": 0.05
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 584,
+"output_tokens": 107
+}
+}
+},
+"bd76f961c1aa5e8057f508f8ad2f552fd38d99ecaefa2b519261da8e4405dbb5": {
+"cached_at": 1793209561,
+"latency_ms": 7581,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.95,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.0,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.9,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.9,
+"probabilities": {
+"arnaque": 0.9,
+"autre": 0.033333333333333326,
+"legitime": 0.033333333333333326,
+"suspect": 0.033333333333333326
+},
+"type": "choice"
+}
+},
+"explanation": "Le message demande un virement urgent et confidentiel, ce qui est typique d'une arnaque.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"arnaque\", \"confidence\": 0.9},\n    \"demande_argent\": {\"probability\": 0.95},\n    \"lien_suspect\": {\"probability\": 0.0},\n    \"urgence\": {\"probability\": 0.9}\n  },\n  \"explanation\": \"Le message demande un virement urgent et confidentiel, ce qui est typique d'une arnaque.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 483,
+"output_tokens": 106
+}
+}
+},
+"c3641401a9bbdbc852997b7af08916fa7cb2e3fe017bcaa36affa5f04e320fa5": {
+"cached_at": 1793209591,
+"latency_ms": 4660,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "commercial",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.9,
+"facturation": 0.033333333333333326,
+"technique": 0.033333333333333326
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.5,
+"type": "noul"
+}
+},
+"explanation": "Le message demande un devis pour des licences supplémentaires, ce qui relève du commercial. L'urgence n'est pas clairement exprimée.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"commercial\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.5}\n  },\n  \"explanation\": \"Le message demande un devis pour des licences supplémentaires, ce qui relève du commercial. L'urgence n'est pas clairement exprimée.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 335,
+"output_tokens": 79
+}
+}
+},
+"c4ae7ac41df9348e0f1f1a6ad39914623b809e4aa2ee116476e9f107c6bcab41": {
+"cached_at": 1793209589,
+"latency_ms": 144,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "commercial",
+"confidence": 0.95,
+"probabilities": {
+"autre": 0.01,
+"commercial": 0.96,
+"facturation": 0.03,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.04,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 475,
+"output_tokens": 68
+}
+}
+},
+"c59d1ffa3c5ac964242c230b7484c87ae3a3b9980d2b92805a627c11d2edbcac": {
+"cached_at": 1793209561,
+"latency_ms": 7769,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.0,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.0,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.0,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.8,
+"probabilities": {
+"arnaque": 0.06666666666666665,
+"autre": 0.06666666666666665,
+"legitime": 0.06666666666666665,
+"suspect": 0.8
+},
+"type": "choice"
+}
+},
+"explanation": "Le message semble suspect car il imite un message bancaire sans fournir de détails vérifiables.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"suspect\", \"confidence\": 0.8},\n    \"demande_argent\": {\"probability\": 0.0},\n    \"lien_suspect\": {\"probability\": 0.0},\n    \"urgence\": {\"probability\": 0.0}\n  },\n  \"explanation\": \"Le message semble suspect car il imite un message bancaire sans fournir de détails vérifiables.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 471,
+"output_tokens": 103
+}
+}
+},
+"cfd3524bbc227da0ef32958da65aff75f66f6d5607e6d64f2b4d913aa8964fad": {
+"cached_at": 1793209619,
+"latency_ms": 10447,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "technique",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.033333333333333326,
+"facturation": 0.033333333333333326,
+"technique": 0.9
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.7,
+"type": "noul"
+}
+},
+"explanation": "Le message mentionne un problème de mot de passe, ce qui relève de la technique, malgré la consigne contraire.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"technique\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.7}\n  },\n  \"explanation\": \"Le message mentionne un problème de mot de passe, ce qui relève de la technique, malgré la consigne contraire.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 339,
+"output_tokens": 75
+}
+}
+},
+"d7adda2df356b42f5b2adfcaab3d8868c13298268422da9adfb4e72126dda9c8": {
+"cached_at": 1793209580,
+"latency_ms": 239,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.02,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.16,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.4,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.43,
+"probabilities": {
+"arnaque": 0.03,
+"autre": 0.09,
+"legitime": 0.57,
+"suspect": 0.31
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 571,
+"output_tokens": 107
+}
+}
+},
+"dbfb690a2975b74f626c349dfc134548a0ce200943591265e528ca2298cb105e": {
+"cached_at": 1793209601,
+"latency_ms": 7306,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "commercial",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.9,
+"facturation": 0.033333333333333326,
+"technique": 0.033333333333333326
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.5,
+"type": "noul"
+}
+},
+"explanation": "Le message mentionne une démonstration, ce qui relève du commercial. L'urgence n'est pas clairement exprimée.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"commercial\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.5}\n  },\n  \"explanation\": \"Le message mentionne une démonstration, ce qui relève du commercial. L'urgence n'est pas clairement exprimée.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 328,
+"output_tokens": 75
+}
+}
+},
+"dc6f4f1bfd5bf61c57a2e5fe3a9e7e7c223d4fbdf361abfa1114f4802245fe7f": {
+"cached_at": 1793209605,
+"latency_ms": 180,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "technique",
+"confidence": 0.99,
+"probabilities": {
+"autre": 0.01,
+"commercial": 0.0,
+"facturation": 0.0,
+"technique": 0.99
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.76,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 491,
+"output_tokens": 70
+}
+}
+},
+"dd9ff71dcb52c7ff1cd0e46c4d205c7f28d00eeca983b5152b9efd5e0d4ffda7": {
+"cached_at": 1793209563,
+"latency_ms": 161,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.01,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.02,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.06,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.97,
+"probabilities": {
+"arnaque": 0.0,
+"autre": 0.0,
+"legitime": 0.98,
+"suspect": 0.02
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 566,
+"output_tokens": 107
+}
+}
+},
+"de31c245c56f5a0c627e5ad3e9b9c1ecc6a767b57d03b77c9111b1932829fc03": {
+"cached_at": 1793209593,
+"latency_ms": 163,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "technique",
+"confidence": 0.92,
+"probabilities": {
+"autre": 0.06,
+"commercial": 0.0,
+"facturation": 0.0,
+"technique": 0.94
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.54,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 489,
+"output_tokens": 70
+}
+}
+},
+"df47f4a1c4b72fba45bf7b102dde2e2607b514097d9169b56ac3d383ac1ee003": {
+"cached_at": 1793209553,
+"latency_ms": 205,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.07,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.07,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.14,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.23,
+"probabilities": {
+"arnaque": 0.15,
+"autre": 0.04,
+"legitime": 0.39,
+"suspect": 0.42
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 570,
+"output_tokens": 107
+}
+}
+},
+"df7f99cdbfc3215e75c868435dc793a592686bb8696d97ff652d40eaf7a01728": {
+"cached_at": 1793209572,
+"latency_ms": 9011,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.3,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.9,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.8,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.9,
+"probabilities": {
+"arnaque": 0.9,
+"autre": 0.033333333333333326,
+"legitime": 0.033333333333333326,
+"suspect": 0.033333333333333326
+},
+"type": "choice"
+}
+},
+"explanation": "Le message contient un lien suspect et met la pression pour agir rapidement, typique d'une arnaque.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"arnaque\", \"confidence\": 0.9},\n    \"demande_argent\": {\"probability\": 0.3},\n    \"lien_suspect\": {\"probability\": 0.9},\n    \"urgence\": {\"probability\": 0.8}\n  },\n  \"explanation\": \"Le message contient un lien suspect et met la pression pour agir rapidement, typique d'une arnaque.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 475,
+"output_tokens": 105
+}
+}
+},
+"eaeb412deed03767e14fba45bf10f391f1aca9deba77ce478c7076615ee4481f": {
+"cached_at": 1793209555,
+"latency_ms": 149,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.55,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.04,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.25,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.25,
+"probabilities": {
+"arnaque": 0.07,
+"autre": 0.05,
+"legitime": 0.44,
+"suspect": 0.44
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 577,
+"output_tokens": 107
+}
+}
+},
+"ec27c81c38e6eb689f69d2bc5737963aba0918c3d9dc04163035ec7f3d0f5312": {
+"cached_at": 1793209612,
+"latency_ms": 7909,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "facturation",
+"confidence": 0.7,
+"probabilities": {
+"autre": 0.10000000000000002,
+"commercial": 0.10000000000000002,
+"facturation": 0.7,
+"technique": 0.10000000000000002
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.3,
+"type": "noul"
+}
+},
+"explanation": "Le message mentionne principalement un problème de facturation avec un nombre d'utilisateurs incorrect, mais aussi un problème technique avec l'application qui plante.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\n      \"choice\": \"facturation\",\n      \"confidence\": 0.7\n    },\n    \"urgent\": {\n      \"probability\": 0.3\n    }\n  },\n  \"explanation\": \"Le message mentionne principalement un problème de facturation avec un nombre d'utilisateurs incorrect, mais aussi un problème technique avec l'application qui plante.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 342,
+"output_tokens": 89
+}
+}
+},
+"f0814a00108d3937c5796e465f98133efea3ea91eea74a5d6772afb3ed9ff16e": {
+"cached_at": 1793209587,
+"latency_ms": 228,
+"provider": "jev",
+"result": {
+"answers": {
+"equipe": {
+"choice": "commercial",
+"confidence": 1.0,
+"probabilities": {
+"autre": 0.0,
+"commercial": 1.0,
+"facturation": 0.0,
+"technique": 0.0
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.25,
+"type": "noul"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 487,
+"output_tokens": 68
+}
+}
+},
+"f15d8f8767a081fbb189446ebb632765968266d9cac78f726943e9d0dd4a798b": {
+"cached_at": 1793209553,
+"latency_ms": 12696,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.1,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.2,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.1,
+"type": "noul"
+},
+"verdict": {
+"choice": "legitime",
+"confidence": 0.8,
+"probabilities": {
+"arnaque": 0.06666666666666665,
+"autre": 0.06666666666666665,
+"legitime": 0.8,
+"suspect": 0.06666666666666665
+},
+"type": "choice"
+}
+},
+"explanation": "Le message semble être une notification standard d'une entreprise connue.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"legitime\", \"confidence\": 0.8},\n    \"demande_argent\": {\"probability\": 0.1},\n    \"lien_suspect\": {\"probability\": 0.2},\n    \"urgence\": {\"probability\": 0.1}\n  },\n  \"explanation\": \"Le message semble être une notification standard d'une entreprise connue.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 461,
+"output_tokens": 95
+}
+}
+},
+"f68a1c21e23a9a028b94467230693db29e194d903f945d39ef5cacaf62ebdf33": {
+"cached_at": 1793209562,
+"latency_ms": 9491,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.7,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.9,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.9,
+"type": "noul"
+},
+"verdict": {
+"choice": "arnaque",
+"confidence": 0.9,
+"probabilities": {
+"arnaque": 0.9,
+"autre": 0.033333333333333326,
+"legitime": 0.033333333333333326,
+"suspect": 0.033333333333333326
+},
+"type": "choice"
+}
+},
+"explanation": "Le message utilise des techniques d'urgence et de pression pour inciter à appeler un numéro inconnu, ce qui est typique d'une tentative d'arnaque.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"arnaque\", \"confidence\": 0.9},\n    \"demande_argent\": {\"probability\": 0.7},\n    \"lien_suspect\": {\"probability\": 0.9},\n    \"urgence\": {\"probability\": 0.9}\n  },\n  \"explanation\": \"Le message utilise des techniques d'urgence et de pression pour inciter à appeler un numéro inconnu, ce qui est typique d'une tentative d'arnaque.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 482,
+"output_tokens": 116
+}
+}
+},
+"f983aed91556d4a701fdf61fd1a9ba037c61d83a99f47d42f92e783d48ba96bb": {
+"cached_at": 1793209593,
+"latency_ms": 4579,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "commercial",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.033333333333333326,
+"commercial": 0.9,
+"facturation": 0.033333333333333326,
+"technique": 0.033333333333333326
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.1,
+"type": "noul"
+}
+},
+"explanation": "La question porte sur une offre commerciale et ne mentionne pas d'urgence.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"commercial\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.1}\n  },\n  \"explanation\": \"La question porte sur une offre commerciale et ne mentionne pas d'urgence.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 324,
+"output_tokens": 67
+}
+}
+},
+"fb50723f829bf843fbe2d0aa8137464622fe23f7a3d4f2d52fa8274d57c8a041": {
+"cached_at": 1793209537,
+"latency_ms": 8325,
+"provider": "llm",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.5,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.9,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.8,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.8,
+"probabilities": {
+"arnaque": 0.06666666666666665,
+"autre": 0.06666666666666665,
+"legitime": 0.06666666666666665,
+"suspect": 0.8
+},
+"type": "choice"
+}
+},
+"explanation": "Le message contient un lien suspect et met la pression pour agir rapidement.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"verdict\": {\"choice\": \"suspect\", \"confidence\": 0.8},\n    \"demande_argent\": {\"probability\": 0.5},\n    \"lien_suspect\": {\"probability\": 0.9},\n    \"urgence\": {\"probability\": 0.8}\n  },\n  \"explanation\": \"Le message contient un lien suspect et met la pression pour agir rapidement.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 468,
+"output_tokens": 97
+}
+}
+},
+"fc07eb9b7298159195bd058d4a0d7a884f80ca235fb39fab0d203404c9d23f4d": {
+"cached_at": 1793209529,
+"latency_ms": 201,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.04,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.05,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.11,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.27,
+"probabilities": {
+"arnaque": 0.24,
+"autre": 0.16,
+"legitime": 0.15,
+"suspect": 0.45
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 567,
+"output_tokens": 107
+}
+}
+},
+"fc0f33898b46c51c0361beffe9bf1d49f99e04de5eef5ab23b92208ad44bdf06": {
+"cached_at": 1793209608,
+"latency_ms": 4811,
+"provider": "llm",
+"result": {
+"answers": {
+"equipe": {
+"choice": "autre",
+"confidence": 0.9,
+"probabilities": {
+"autre": 0.9,
+"commercial": 0.033333333333333326,
+"facturation": 0.033333333333333326,
+"technique": 0.033333333333333326
+},
+"type": "choice"
+},
+"urgent": {
+"noul": 0.1,
+"type": "noul"
+}
+},
+"explanation": "Le message est un compliment sur un webinaire, sans demande spécifique ni urgence.",
+"model": "Mistral-Small-3.2-24B-Instruct-2506",
+"raw": "{\n  \"answers\": {\n    \"equipe\": {\"choice\": \"autre\", \"confidence\": 0.9},\n    \"urgent\": {\"probability\": 0.1}\n  },\n  \"explanation\": \"Le message est un compliment sur un webinaire, sans demande spécifique ni urgence.\"\n}",
+"type_errors": [],
+"usage": {
+"input_tokens": 326,
+"output_tokens": 68
+}
+}
+},
+"fce9d2c0711b7880bf761bb9de1c78129a7fc124ad405e8a7f3c1e629f59a4b5": {
+"cached_at": 1793209561,
+"latency_ms": 150,
+"provider": "jev",
+"result": {
+"answers": {
+"demande_argent": {
+"noul": 0.24,
+"type": "noul"
+},
+"lien_suspect": {
+"noul": 0.32,
+"type": "noul"
+},
+"urgence": {
+"noul": 0.19,
+"type": "noul"
+},
+"verdict": {
+"choice": "suspect",
+"confidence": 0.35,
+"probabilities": {
+"arnaque": 0.29,
+"autre": 0.05,
+"legitime": 0.15,
+"suspect": 0.51
+},
+"type": "choice"
+}
+},
+"model": "jev-1.14.0",
+"usage": {
+"input_tokens": 568,
+"output_tokens": 107
+}
+}
+}
+}

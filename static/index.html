@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jev Lab</title>
+<meta name="theme-color" content="#0e92b9">
+<link rel="icon" type="image/png" href="/static/nijal-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/"><img src="/static/nijal-mark.png" alt="" width="28" height="28"><span class="brand-name">Jev <span>Lab</span></span><span class="by">par Nijal AI</span></a>
+  <div id="badges" class="badges"></div>
+  <div id="who" class="who"></div>
+</header>
+
+<main>
+  <section id="login" class="card login hidden">
+    <img class="login-logo" src="/static/nijal-mark.png" alt="Nijal AI" width="56" height="56">
+    <h1>Bienvenue dans le Jev Lab</h1>
+    <p class="muted">Jev est un modèle « System One » : il lit un texte et répond à des questions fermées par des
+      décisions chiffrées (un choix, un niveau, une probabilité), sans jamais rédiger de texte. Ici, vous allez le mettre à l'épreuve.</p>
+    <form id="login-form">
+      <label>Code de session <span class="muted small">(affiché à l'écran)</span><input id="login-code" autocomplete="off" autocapitalize="off" required></label>
+      <label>Votre prénom<input id="login-name" maxlength="40" required placeholder="ex. Léa" autocomplete="given-name"></label>
+      <button class="primary" type="submit">Entrer dans le Lab</button>
+      <p id="login-error" class="error"></p>
+    </form>
+  </section>
+
+  <section id="app" class="hidden">
+    <nav class="tabs" id="tabs">
+      <button data-tab="pg" class="active"><span class="stepnum">1</span> Découvrir</button>
+      <button data-tab="lot"><span class="stepnum">2</span> Missions</button>
+      <button data-tab="duel"><span class="stepnum">3</span> Duel</button>
+      <button data-tab="admin" class="hidden" id="tab-admin">Admin</button>
+    </nav>
+
+    <!-- 1. Découvrir -->
+    <div class="tab" id="tab-pg">
+      <div class="info">
+        <b>Comment ça marche ?</b> Jev lit un texte (le « state ») et répond aux questions qu'on lui pose.
+        Il ne rédige rien : il renvoie un <b>choix</b>, un <b>niveau</b> ou une <b>probabilité</b>, avec son degré de certitude.
+        <ol class="steps">
+          <li>Choisissez un scénario.</li>
+          <li>Lisez le texte et les questions, ou essayez un autre exemple.</li>
+          <li>Cliquez sur <b>Demander à Jev</b>, puis comparez avec un LLM classique.</li>
+        </ol>
+      </div>
+
+      <h2 class="step-title"><span class="stepnum">1</span> Choisissez un scénario</h2>
+      <div id="pg-presets" class="scenarios"></div>
+
+      <div class="card">
+        <h2 class="step-title"><span class="stepnum">2</span> Le texte que Jev va analyser</h2>
+        <p class="muted small">Vous pouvez le modifier librement, ou partir d'un exemple :</p>
+        <div id="pg-examples" class="row wrap gap"></div>
+        <textarea id="pg-state" rows="3"></textarea>
+
+        <h3>Les questions posées à Jev</h3>
+        <div id="pg-qview"></div>
+        <details class="advanced" id="pg-adv">
+          <summary>Personnaliser les questions <span class="muted small">(avancé)</span></summary>
+          <p class="muted small">Modifiez les consignes, les options, ou ajoutez une question. Trois types existent :
+            <b>Choix</b> (une option parmi une liste), <b>Niveau</b> (une échelle ordonnée) et <b>Oui/non</b> (une probabilité).</p>
+          <div id="pg-builder"></div>
+        </details>
+
+        <h2 class="step-title"><span class="stepnum">3</span> Lancez</h2>
+        <div class="row wrap gap">
+          <button class="primary" id="pg-run">Demander à Jev</button>
+          <button id="pg-llm">Comparer avec le LLM</button>
+        </div>
+        <p id="pg-error" class="error"></p>
+      </div>
+      <div class="grid2">
+        <div id="pg-jev"></div>
+        <div id="pg-llm-out"></div>
+      </div>
+    </div>
+
+    <!-- 2. Missions -->
+    <div class="tab hidden" id="tab-lot">
+      <div class="info">
+        <b>Le principe.</b> Un vrai système ne pose pas une question : il en traite des centaines. Ici, Jev analyse
+        tout un lot de cas dont on connaît la bonne réponse. À vous de régler des <b>limites</b> sur ses notes
+        pour décider ce qui est automatisé et ce qui part à un humain. Tout se recalcule en direct.
+      </div>
+      <div id="missions" class="scenarios two"></div>
+
+      <div class="card" id="mission-brief"></div>
+
+      <div class="card hidden" id="custom-cases"></div>
+      <div class="card hidden" id="bet"></div>
+
+      <div class="card">
+        <h2 class="step-title"><span class="stepnum">1</span> Faites analyser le lot par Jev</h2>
+        <div class="row wrap gap">
+          <button class="primary" id="lot-run">Lancer le lot</button>
+          <span id="lot-progress" class="muted"></span>
+        </div>
+        <p id="lot-error" class="error"></p>
+        <details class="advanced" id="ds-qbox">
+          <summary>Voir ou modifier les questions envoyées à Jev <span class="muted small" id="ds-qcount"></span></summary>
+          <p class="muted small">Après une modification, cliquez sur <b>Lancer le lot</b> pour voir l'effet. Les questions
+            d'origine sont déjà en cache : leurs réponses sont instantanées et ne comptent pas dans votre quota.</p>
+          <div id="ds-builder"></div>
+          <div class="row wrap gap actions">
+            <button id="ds-reset" class="small">Revenir aux questions d'origine</button>
+            <label class="file-btn small">Importer vos propres cas (CSV text,label)<input type="file" id="ds-csv" accept=".csv,text/csv" hidden></label>
+          </div>
+        </details>
+      </div>
+
+      <div class="card" id="lot-settings"></div>
+      <div id="lot-metrics"></div>
+      <div class="card hidden" id="bet-result"></div>
+      <div class="card hidden" id="board"></div>
+      <div class="card hidden" id="challenge"></div>
+      <div class="card hidden" id="compare"></div>
+      <div class="card" id="lot-cases"></div>
+    </div>
+
+    <!-- 3. Duel -->
+    <div class="tab hidden" id="tab-duel">
+      <div class="info">
+        <b>Le duel.</b> Le LLM <b id="duel-model"></b> reçoit exactement les mêmes cas et les mêmes questions
+        que Jev. Il doit répondre en JSON : son choix, sa confiance (qu'il estime lui-même, sans calibration) et une phrase
+        d'explication. On compare ensuite les deux avec les limites réglées dans l'onglet Missions.
+      </div>
+      <div class="card">
+        <p>Mission en cours : <b id="duel-ds"></b></p>
+        <div class="row wrap gap">
+          <button class="primary" id="duel-run">Lancer le duel</button>
+          <span id="duel-progress" class="muted"></span>
+        </div>
+        <p class="muted small">Le LLM met plusieurs secondes par cas. Sur les questions d'origine, les réponses sont en cache et arrivent tout de suite.</p>
+        <p id="duel-error" class="error"></p>
+      </div>
+      <div class="card" id="duel-table"></div>
+      <div class="card hidden" id="duel-calib"></div>
+      <div class="card" id="duel-examples"></div>
+      <details class="card advanced" id="duel-settings-box">
+        <summary>Ajuster les limites sans quitter le duel</summary>
+        <div id="duel-settings"></div>
+      </details>
+    </div>
+
+    <!-- Admin -->
+    <div class="tab hidden" id="tab-admin-panel">
+      <div class="card">
+        <div class="row wrap gap">
+          <button class="primary" id="adm-warm">Préchauffer le cache</button>
+          <label class="switch"><input type="checkbox" id="adm-cacheonly"> Cache seul</label>
+          <button id="adm-download">Télécharger cache.json</button>
+          <button id="adm-refresh" class="ghost">Rafraîchir</button>
+        </div>
+        <p id="adm-warm-status" class="muted"></p>
+        <p class="muted small">Préchauffer exécute toutes les missions, avec leurs questions d'origine, sur Jev et sur le LLM.
+          Committer <code>data/cache.json</code> pour qu'il soit rechargé au démarrage.
+          « Cache seul » refuse tout appel non préchauffé (si l'API tombe pendant l'atelier).</p>
+      </div>
+      <div class="card" id="adm-stats"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">Jev Lab · projet open source de <a href="https://github.com/Nijal-AI/jev-lab">Nijal AI</a> · licence MIT ·
+  Jev est un modèle de TypeSafe AI ; ce projet n'est pas affilié à TypeSafe AI.</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

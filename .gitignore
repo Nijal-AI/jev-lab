@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.tmp
+.env
+# Lien local vers l'app Clever Cloud (identifiants internes)
+.clever.json

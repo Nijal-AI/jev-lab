@@ -1,0 +1,102 @@
+{
+ "id": "votre-cas-categories",
+ "custom": true,
+ "template": "Trier en catégories",
+ "title": "Mission 3 · Votre cas",
+ "kind": "multiclass",
+ "description": "Construisez votre propre classifieur. Modèle de départ : trier le courrier reçu par un service RH.",
+ "mission": {
+  "objectif": "Construire en 15 minutes un tri automatique pour un cas de votre métier, et voir où Jev se trompe.",
+  "etapes": [
+   "Choisissez un modèle de départ : trier en catégories, ou lever une alerte.",
+   "Adaptez les questions à votre métier (ouvrez « Voir ou modifier les questions »).",
+   "Écrivez une dizaine de cas fictifs avec la bonne réponse, un par ligne.",
+   "Lancez le lot, réglez les seuils, et regardez où Jev se trompe."
+  ],
+  "indices": [
+   "Une catégorie par équipe ou par action à mener, pas plus de 6 pour commencer.",
+   "Écrivez des cas difficiles exprès : deux sujets dans le même message, un message hors sujet, une consigne piège."
+  ]
+ },
+ "questions": {
+  "categorie": {
+   "type": "choice",
+   "instructions": "À quel type de demande correspond ce message reçu par le service RH",
+   "criteria": {
+    "candidature": "Candidature spontanée ou réponse à une offre d'emploi",
+    "absence": "Congés, arrêt maladie, absence, télétravail",
+    "paie": "Bulletin de salaire, erreur de paie, remboursement de frais",
+    "autre": "Tout le reste"
+   }
+  },
+  "urgent": {
+   "type": "noul",
+   "instructions": "Le message demande une réponse urgente"
+  }
+ },
+ "target": {
+  "question": "categorie"
+ },
+ "labels": [
+  "candidature",
+  "absence",
+  "paie",
+  "autre"
+ ],
+ "thresholds": {
+  "confidence": 0.6
+ },
+ "costs": {
+  "error": 5,
+  "human": 1
+ },
+ "cases": [
+  {
+   "text": "Bonjour, je vous adresse ma candidature pour le poste de comptable publié sur votre site.",
+   "label": "candidature"
+  },
+  {
+   "text": "Je serai en arrêt maladie jusqu'à vendredi, je vous envoie le certificat dès que possible.",
+   "label": "absence"
+  },
+  {
+   "text": "Il manque mes heures supplémentaires de septembre sur mon bulletin de salaire.",
+   "label": "paie"
+  },
+  {
+   "text": "Puis-je poser trois jours de congés la semaine du 10 ?",
+   "label": "absence"
+  },
+  {
+   "text": "Quand mes frais de déplacement du salon de Lyon seront-ils remboursés ?",
+   "label": "paie"
+  },
+  {
+   "text": "Étudiante en master RH, je cherche une alternance à partir de janvier.",
+   "label": "candidature"
+  },
+  {
+   "text": "Le distributeur de café du 2e étage est encore en panne.",
+   "label": "autre"
+  },
+  {
+   "text": "Mon salaire n'a pas été versé ce mois-ci, j'ai un prélèvement de loyer demain !",
+   "label": "paie"
+  },
+  {
+   "text": "Pouvez-vous me rappeler la date du séminaire d'équipe ?",
+   "label": "autre"
+  },
+  {
+   "text": "Je souhaite passer à deux jours de télétravail par semaine.",
+   "label": "absence"
+  }
+ ],
+ "vocab": {
+  "item": "message",
+  "items": "messages",
+  "ko": "messages mal classés",
+  "ko_cost": "Message mal classé",
+  "auto": "le message est classé automatiquement selon la réponse de Jev"
+ }
+}
