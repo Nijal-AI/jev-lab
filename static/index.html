@@ -25,8 +25,9 @@
     <p class="muted">Jev est un modèle « System One » : il lit un texte et répond à des questions fermées par des
       décisions chiffrées (un choix, un niveau, une probabilité), sans jamais rédiger de texte. Ici, vous allez le mettre à l'épreuve.</p>
     <form id="login-form">
-      <label>Code de session <span class="muted small">(affiché à l'écran)</span><input id="login-code" autocomplete="off" autocapitalize="off" required></label>
       <label>Votre prénom<input id="login-name" maxlength="40" required placeholder="ex. Léa" autocomplete="given-name"></label>
+      <details id="login-admin"><summary class="muted small">Je suis l'animateur</summary>
+        <label>Code animateur<input id="login-code" autocomplete="off" autocapitalize="off"></label></details>
       <button class="primary" type="submit">Entrer dans le Lab</button>
       <p id="login-error" class="error"></p>
     </form>

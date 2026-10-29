@@ -1,4 +1,4 @@
-"""Jetons signés HMAC : code de session + prénom, pas de comptes."""
+"""Jetons signés HMAC : un prénom suffit, le code animateur ouvre l'Admin."""
 from __future__ import annotations
 
 import base64
@@ -37,13 +37,13 @@ def read_token(token: str) -> dict | None:
 def login(code: str, name: str) -> dict:
     code = code.strip()
     name = " ".join(name.split())[:40]
-    if config.ADMIN_CODE and hmac.compare_digest(code, config.ADMIN_CODE):
+    if not code:
+        role = "participant"
+    elif config.ADMIN_CODE and hmac.compare_digest(code, config.ADMIN_CODE):
         role = "admin"
         name = name or "admin"
-    elif code.lower() in config.SESSION_CODES:
-        role = "participant"
     else:
-        raise HTTPException(401, "Code de session inconnu.")
+        raise HTTPException(401, "Code animateur incorrect.")
     if not name:
         raise HTTPException(400, "Indique ton prénom.")
     return {"token": make_token(name, role), "name": name, "role": role}

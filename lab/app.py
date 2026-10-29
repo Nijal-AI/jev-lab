@@ -102,7 +102,7 @@ async def run_call(provider: str, request: dict, user: dict | None) -> dict:
 
 
 class Login(BaseModel):
-    code: str
+    code: str = ""
     name: str = ""
 
 
@@ -129,6 +129,7 @@ def get_config(user: dict = Depends(auth.current_user)):
         "quota": config.MAX_CALLS_PER_PARTICIPANT,
         "used": st.get("jev", 0) + st.get("llm", 0),
         "cache_only": cache.cache_only,
+        "leaderboard": config.LEADERBOARD,
     }
 
 
@@ -190,6 +191,8 @@ def leaderboard(ds_id: str, limit: int | None = 20) -> list[dict]:
 
 @app.post("/api/score")
 def post_score(body: Score, user: dict = Depends(auth.current_user)):
+    if not config.LEADERBOARD:
+        raise HTTPException(404, "Classement désactivé.")
     if body.dataset not in DATASETS or DATASETS[body.dataset].get("custom"):
         raise HTTPException(404, "Pas de classement pour cette mission.")
     entry = body.model_dump() | {"name": user["name"], "at": int(time.time())}
@@ -203,6 +206,8 @@ def post_score(body: Score, user: dict = Depends(auth.current_user)):
 
 @app.get("/api/leaderboard/{ds_id}")
 def get_leaderboard(ds_id: str, _: dict = Depends(auth.current_user)):
+    if not config.LEADERBOARD:
+        raise HTTPException(404, "Classement désactivé.")
     return leaderboard(ds_id)
 
 
@@ -213,7 +218,7 @@ def get_leaderboard(ds_id: str, _: dict = Depends(auth.current_user)):
 def admin_stats(_: dict = Depends(auth.admin_user)):
     rows = sorted(STATS.values(), key=lambda s: -(s["jev"] + s["llm"] + s["cached"]))
     boards = {d["id"]: {"title": d["title"], "kind": d["kind"], "rows": leaderboard(d["id"])}
-              for d in DATASETS.values() if not d.get("custom")}
+              for d in DATASETS.values() if config.LEADERBOARD and not d.get("custom")}
     return {"participants": rows, "cache_size": cache.size(), "cache_only": cache.cache_only,
             "warm": WARM, "quota": config.MAX_CALLS_PER_PARTICIPANT, "leaderboards": boards}
 

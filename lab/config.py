@@ -33,9 +33,10 @@ LLM_MODEL = os.getenv("LLM_MODEL", "mistral-small-latest")
 LLM_PRICE_IN = _float("LLM_PRICE_IN", 0.1)
 LLM_PRICE_OUT = _float("LLM_PRICE_OUT", 0.3)
 
-SESSION_CODES = {c.strip().lower() for c in os.getenv("SESSION_CODES", "atelier").split(",") if c.strip()}
 # Pas de code admin par défaut : sans ADMIN_CODE, l'onglet Admin est fermé.
 ADMIN_CODE = os.getenv("ADMIN_CODE", "").strip()
+# Classement des participants par mission (bouton « Envoyer mon score » et tableaux de l'Admin).
+LEADERBOARD = os.getenv("LEADERBOARD_ENABLED", "").strip().lower() in ("1", "true", "yes", "on")
 SECRET_KEY = os.getenv("SECRET_KEY") or secrets.token_hex(32)
 MAX_CALLS_PER_PARTICIPANT = int(_float("MAX_CALLS_PER_PARTICIPANT", 400))
 

@@ -1,7 +1,7 @@
 import json
 import os
 
-os.environ.update(SESSION_CODES="atelier", ADMIN_CODE="chef", SECRET_KEY="test", MOCK_LATENCY="0",
+os.environ.update(ADMIN_CODE="chef", SECRET_KEY="test", MOCK_LATENCY="0",
                   MAX_CALLS_PER_PARTICIPANT="5", TYPESAFE_API_KEY="", LLM_API_KEY="")
 os.environ["CACHE_FILE"] = "/tmp/jevlab-test-cache.json"
 
@@ -37,7 +37,7 @@ def client():
         yield c
 
 
-def login(c, code="atelier", name="Binôme 1"):
+def login(c, code="", name="Binôme 1"):
     r = c.post("/api/login", json={"code": code, "name": name})
     assert r.status_code == 200, r.text
     return {"X-Lab-Token": r.json()["token"]}
@@ -45,7 +45,8 @@ def login(c, code="atelier", name="Binôme 1"):
 
 def test_login(client):
     assert client.post("/api/login", json={"code": "nope", "name": "x"}).status_code == 401
-    assert client.post("/api/login", json={"code": "ATELIER", "name": " "}).status_code == 400
+    assert client.post("/api/login", json={"name": " "}).status_code == 400
+    assert client.post("/api/login", json={"name": "Léa"}).json()["role"] == "participant"
     h = login(client, "chef", "")
     cfg = client.get("/api/config", headers=h).json()
     assert cfg["user"]["role"] == "admin" and cfg["jev"]["mock"] and cfg["llm"]["mock"]
@@ -175,7 +176,16 @@ def test_datasets_and_warm(client):
     assert client.post("/api/admin/warm", headers=adm).status_code == 200
 
 
-def test_leaderboard_keeps_best(client):
+def test_leaderboard_off_by_default(client):
+    h = login(client)
+    assert client.get("/api/config", headers=h).json()["leaderboard"] is False
+    assert client.post("/api/score", headers=h, json={"dataset": "anti-arnaque", "cost": 3}).status_code == 404
+    assert client.get("/api/leaderboard/anti-arnaque", headers=h).status_code == 404
+    assert client.get("/api/admin/stats", headers=login(client, "chef", "anim")).json()["leaderboards"] == {}
+
+
+def test_leaderboard_keeps_best(client, monkeypatch):
+    monkeypatch.setattr(config, "LEADERBOARD", True)
     a, b = login(client, name="A"), login(client, name="B")
     post = lambda h, cost, fn=0: client.post("/api/score", headers=h, json={"dataset": "anti-arnaque", "cost": cost, "fn": fn})
     assert post(a, 8).json()["rank"] == 1

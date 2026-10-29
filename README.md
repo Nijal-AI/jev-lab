@@ -29,7 +29,7 @@ vitesse, le coût et la fiabilité de la confiance annoncée.
 | **1. Découvrir** | Choisit un scénario (ticket de support, message suspect, commentaire à modérer), interroge Jev puis un LLM, et lit chaque réponse expliquée en une phrase. |
 | **2. Missions** | **Filtre anti-arnaque** : 22 SMS et e-mails fictifs. Il parie sur les cas où Jev va hésiter, règle deux limites (laisser passer, faire vérifier, bloquer) et vise le moins de points de pénalité. Puis le **défi** : écrire la question qui démasque l’arnaque au « faux numéro ». En bonus, un **routage de tickets**, et **Votre cas** pour construire son propre classifieur. |
 | **3. Duel** | Même lot, mêmes limites, Jev contre le LLM : erreurs, latence, coût pour 1 000 décisions, erreurs de format, et un tableau de **calibration** (« quand il annonce 90 %, a-t-il raison 9 fois sur 10 ? »). |
-| **Admin** | Pour l’animateur : classement, statistiques par participant, préchauffage du cache, mode « cache seul » si une API tombe. |
+| **Admin** | Pour l’animateur : statistiques par participant, préchauffage du cache, mode « cache seul » si une API tombe, et le classement si `LEADERBOARD_ENABLED` est activé. |
 
 ![Mission anti-arnaque : limites, résultats et pari](docs/capture-mission.png)
 
@@ -41,8 +41,8 @@ cp .env.example .env          # facultatif : sans clé, tout fonctionne en mode 
 uv run --env-file .env python run.py
 ```
 
-Ouvrez <http://localhost:8080/?code=atelier>. Le paramètre `code` préremplit le code de session : c’est
-le lien à mettre derrière un QR code. Avec `ADMIN_CODE` renseigné, se connecter avec ce code ouvre l’onglet Admin.
+Ouvrez <http://localhost:8080/> : un prénom suffit pour entrer, c’est ce lien qu’on met derrière un QR code.
+Avec `ADMIN_CODE` renseigné, saisir ce code sous « Je suis l’animateur » (ou ouvrir `/?admin=<code>`) donne l’onglet Admin.
 
 Tests : `uv run pytest -q`.
 
@@ -54,8 +54,8 @@ Tests : `uv run pytest -q`.
 | `JEV_MODEL` | `jev-latest` | Alias demandé ; l’app affiche la version réellement renvoyée |
 | `LLM_API_KEY`, `LLM_BASE_URL`, `LLM_MODEL` | Mistral, `mistral-small-latest` | N’importe quel LLM compatible OpenAI (`/chat/completions`, `response_format: json_object`) |
 | `LLM_PRICE_IN`, `LLM_PRICE_OUT` | 0.1 / 0.3 | Prix en dollars par million de tokens, pour le coût affiché |
-| `SESSION_CODES` | `atelier` | Codes des participants, séparés par des virgules |
 | `ADMIN_CODE` | vide → pas d’Admin | Code de l’animateur |
+| `LEADERBOARD_ENABLED` | `false` | Classement des participants par mission (envoi de score + tableaux de l’Admin) |
 | `SECRET_KEY` | aléatoire | Signe les sessions ; à fixer en production |
 | `MAX_CALLS_PER_PARTICIPANT` | 400 | Quota par participant ; les réponses en cache ne comptent pas |
 

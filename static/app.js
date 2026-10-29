@@ -74,7 +74,7 @@ $("#login-form").addEventListener("submit", async (e) => {
 });
 
 const params = new URLSearchParams(location.search);
-if (params.get("code")) $("#login-code").value = params.get("code");
+if (params.get("admin")) { $("#login-code").value = params.get("admin"); $("#login-admin").open = true; }
 
 async function refreshConfig() {
   S.cfg = await api("/api/config");
@@ -371,7 +371,7 @@ async function loadDataset(id) {
   $("#ds-qbox").open = !!d.custom;
   renderBrief(); renderCustomCases();
   S.renderLotQs(); lotQsChanged(); renderLot();
-  if (!d.custom) refreshBoard();
+  refreshBoard();
 }
 
 function renderBrief() {
@@ -471,7 +471,7 @@ async function runBatch(providers) {
   if (stop || failed) errEl.textContent = stop || `${failed} cas en erreur : ${S.res.jev.concat(S.res.llm).find((r) => r?.error)?.error}`;
   if (!S.baseRes && sig === origSig() && S.res.jev.length === S.ds.cases.length && S.res.jev.every((r) => r && !r.error)) S.baseRes = S.res.jev.slice();
   lotQsChanged(); renderLot(); renderDuel();
-  if (!S.ds.custom) refreshBoard();
+  refreshBoard();
   if (!duel) $("#lot-settings").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -866,7 +866,7 @@ function renderCompare(m) {
 }
 
 async function refreshBoard() {
-  const id = S.ds?.id; if (!id || S.ds.custom) return;
+  const id = S.ds?.id; if (!id || S.ds.custom || !S.cfg?.leaderboard) return;
   try { S.boards[id] = await api(`/api/leaderboard/${encodeURIComponent(id)}`); } catch { return; }
   if (S.ds.id === id) renderBoard(S.res.jev.some(Boolean) ? metrics(S.res.jev, S.ds, lotQuestions().questions) : null);
 }
@@ -880,8 +880,9 @@ function settingsLabel() {
 
 function renderBoard(m) {
   const ds = S.ds; const el = $("#board");
-  el.classList.toggle("hidden", ds.custom || !m);
-  if (ds.custom || !m) return;
+  const off = ds.custom || !m || !S.cfg?.leaderboard;
+  el.classList.toggle("hidden", off);
+  if (off) return;
   const rows = S.boards[ds.id] || []; const me = S.cfg?.user.name;
   const fresh = S.ran.jev === qSig() && S.res.jev.every((r) => r && !r.error);
   const errCol = "erreurs graves";
